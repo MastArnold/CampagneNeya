@@ -147,7 +147,7 @@ body{
     position: relative;
     width: 80%;
     display: block;
-    margin : 0 auto;
+    margin : 40px auto;
     transform: translateX(-50%);
     opacity: 0.3;
     transition: all 1.2s ease-in-out;
@@ -214,7 +214,7 @@ body{
 .section-team{
     width: 80%;
     padding : 12px;
-    margin:0 auto;
+    margin:0 auto 50px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -269,7 +269,7 @@ body{
     justify-content: center;
     align-items: center;
     gap : 8px;
-    margin : 12px 0 0 0;
+    margin : 15px 0;
 }
 .section-team .membre .content .reseaux a{
     display: block;
