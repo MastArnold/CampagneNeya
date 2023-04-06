@@ -30,3 +30,19 @@
 .ico-arrow-right{
     content: url("../assets/svg/right-arrow-direction.svg");
 }
+
+.ico-facebook{
+    content: url("../assets/svg/facebook.svg");
+}
+.ico-whatsapp{
+    content: url("../assets/svg/whatsapp.svg");
+}
+.ico-phone{
+    content: url("../assets/svg/phone-cable.svg");
+}
+.ico-gmail{
+    content: url("../assets/svg/gmail-old.svg");
+}
+.ico-adresse{
+    content: url("../assets/svg/position-o.svg");
+}
