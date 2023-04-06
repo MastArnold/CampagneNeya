@@ -46,3 +46,13 @@
 .ico-adresse{
     content: url("../assets/svg/position-o.svg");
 }
+
+.ico-res-facebook{
+    content: url("../assets/svg/facebook-res.svg");
+}
+.ico-res-whatsapp{
+    content: url("../assets/svg/whatsapp-res.svg");
+}
+.ico-res-linkedin{
+    content: url("../assets/svg/linkedin-res.svg");
+}

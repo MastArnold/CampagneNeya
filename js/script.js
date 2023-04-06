@@ -1,5 +1,8 @@
     const navbar = document.querySelector(".navbar");
+    const sectionCarouselPresentation = document.querySelector(".section-carousel-presentation");
     const presentationTabItem = document.querySelectorAll(".presentation-tab-item");
+    const sectionVideoCampagne = document.querySelector(".section-video-campagne");
+    const sectionContact = document.querySelector(".section-contact");
     //
     const presentationButton1 = document.querySelector("#presentation-button-1");
     const presentationButton2 = document.querySelector("#presentation-button-2");
@@ -48,11 +51,24 @@
         }else{
             navbar.classList.remove("down");
         }
+
+        if(sectionCarouselPresentation.scrollTop <= document.documentElement.scrollTop){
+            sectionCarouselPresentation.style = "transform:translateX(0); opacity:1;"
+        }
+
+        if((+sectionVideoCampagne.scrollTop+500) <= document.documentElement.scrollTop){
+            sectionVideoCampagne.style = "scale : 1;";
+        }
+
+        if((+sectionContact.scrollTop+500) <= document.documentElement.scrollTop){
+            sectionContact.style = "transform:translateX(0); opacity:1;";
+        }
     });
 
     buttonNextVideo.addEventListener('click', ()=>{
-        if(videoIteration < 2)
+        if(videoIteration < 2){
             videoIteration++;
+        }
         setTimeout(()=>{
             videos.forEach((item)=>{
                 switch(videoIteration){
@@ -60,9 +76,13 @@
                         item.style = "transform:translateX(100%)";
                         break;
                     case 1:
+                        document.querySelector("#video-1 video").pause();
+                        document.querySelector("#video-1 video").currentTime = 0;
                         item.style = "transform:translateX(0)";
                         break;
                     case 2:
+                        document.querySelector("#video-2 video").pause();
+                        document.querySelector("#video-2 video").currentTime = 0;
                         item.style = "transform:translateX(-100%)";
                         break;
                     default:
@@ -79,9 +99,13 @@
             videos.forEach((item)=>{
                 switch(videoIteration){
                     case 0:
+                        document.querySelector("#video-2 video").pause();
+                        document.querySelector("#video-2 video").currentTime = 0;
                         item.style = "transform:translateX(100%)";
                         break;
                     case 1:
+                        document.querySelector("#video-3 video").pause();
+                        document.querySelector("#video-3 video").currentTime = 0;
                         item.style = "transform:translateX(0)";
                         break;
                     case 2:

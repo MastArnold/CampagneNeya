@@ -2,6 +2,7 @@
     scroll-behavior: smooth !important;
 }
 body{
+    overflow-x: hidden;
     position: relative;
     margin:0;
     padding:0;
@@ -33,6 +34,7 @@ body{
     background: #fff873;
     color : #272726;
     font-weight: bold;
+    font-size: 14px;
     border:1px solid transparent;
     transition: all 0.6s ease-in-out;
 }
@@ -145,7 +147,10 @@ body{
     position: relative;
     width: 80%;
     display: block;
-    margin : 0 auto
+    margin : 0 auto;
+    transform: translateX(-50%);
+    opacity: 0.3;
+    transition: all 1.2s ease-in-out;
 }
 .section-carousel-presentation .presentation-nav, .section-carousel-presentation .presentation-tab{
     margin : 0;
@@ -205,12 +210,88 @@ body{
     border-radius: 6px;
     background: #fff;
 }
+/******************/
+.section-team{
+    width: 80%;
+    padding : 12px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : 6px;
+}
+@media (max-width : 720px){
+    .section-team{
+        flex-direction: column;
+        gap : 20px;
+    }
+    .section-team .membre{
+        width: 80%;
+    }
+}
+.section-team .membre{
+    background: #fff873;
+    width: 30%;
+    height: auto;
+    padding : 10px;
+    transform: translateY(50px);
+    box-shadow: 0 5px 15px rgb(255, 248, 115, 0.6);
+}
+.section-team .membre .photo{
+    overflow: hidden;
+    width: 100px;
+    height : 100px;
+    border : 2px solid #fff873;
+    border-radius: 50%;
+    margin : 0 auto;
+    transform: translateY(-50px);
+}
+.section-team .membre .photo img{
+    width: 100%;
+    height: auto;
+}
+.section-team .membre .content{
+    padding : 15px 0 0 0; 
+}
+.section-team .membre .content .nom{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Calibri';
+    text-align: center;
+}
+.section-team .membre .content .poste{
+    font-size: 14px;
+    font-family: 'Calibri Light';
+    text-align: center;
+}
+.section-team .membre .content .reseaux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 8px;
+    margin : 12px 0 0 0;
+}
+.section-team .membre .content .reseaux a{
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.section-team .membre .content .reseaux i{
+    padding : 5px;
+    background: #fff;
+    border:1px solid transparent;
+    border-radius: 50%;
+}
+
+/******************/
 
 .section-video-campagne{
     position: relative;
     width: 80%;
     padding : 20px;
     margin : 0 auto;
+    scale : 0.4;
+    transition: all 1.2s ease-in-out;
 }
 .section-video-campagne .arrow-left{
     display: flex;
@@ -219,7 +300,7 @@ body{
     position: absolute;
     top : 0;
     left : 20px;
-    bottom : 0;
+    bottom : 80px;
     width: 10%;
     background: transparent;
     z-index: 1999;
@@ -231,7 +312,7 @@ body{
     position: absolute;
     top : 0;
     right : 20px;
-    bottom : 0;
+    bottom : 80px;
     width: 10%;
     background: transparent;
     z-index: 1999;
@@ -276,6 +357,13 @@ body{
     padding : 8px;
     margin : 18px auto;
     border: 1px solid rgb(0, 0, 0, 0.5);
+    transform: translateX(50%);
+    opacity: 0.3;
+    backdrop-filter: blur(10px);
+    background-image: url("../assets/img/3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1.2s ease-in-out;
 }   
 .section-contact h1{
     text-align: center;
@@ -299,8 +387,8 @@ body{
 /**********/
 .contact-form{
     position: relative;
-    width: 100%;
-    padding : 8px;
+    width: calc(100% - 40px);
+    padding : 20px;
 }
 .contact-form .form-group {
     position: relative;
@@ -312,9 +400,65 @@ body{
     justify-content: center;
     align-items: center;
 }
-.contact-form button{
+
+.contact-form button {
     cursor: pointer;
-    padding : 12px;
-    background: #272726;
-    color : #fff873;
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    color: black;
+    z-index: 1;
 }
+   
+.contact-form button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+   
+.contact-form button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #fff873;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+   
+.contact-form button:hover {
+    color: #272726;
+    border: 1px solid #fff873;
+}
+   
+.button:hover:before {
+    top: -35%;
+    background-color: #fff873;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+   
+.contact-form button:hover:after {
+    top: -45%;
+    background-color: #fff873;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+/***********************/
