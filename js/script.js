@@ -1,22 +1,28 @@
-    const navbar = document.querySelector(".navbar");
-    const sectionCarouselPresentation = document.querySelector(".section-carousel-presentation");
-    const presentationTabItem = document.querySelectorAll(".presentation-tab-item");
-    const sectionVideoCampagne = document.querySelector(".section-video-campagne");
-    const sectionContact = document.querySelector(".section-contact");
-    //
-    const presentationButton1 = document.querySelector("#presentation-button-1");
-    const presentationButton2 = document.querySelector("#presentation-button-2");
-    const presentationButton3 = document.querySelector("#presentation-button-3");
-    //
-    const presentationTabItem1 = document.querySelector("#carousel-tab-1");
-    const presentationTabItem2 = document.querySelector("#carousel-tab-2");
-    const presentationTabItem3 = document.querySelector("#carousel-tab-3");
-    //
-    let videoIteration = 0;
-    const buttonNextVideo = document.querySelector(".section-video-campagne .arrow-right button");
-    const buttonPreviousVideo = document.querySelector(".section-video-campagne .arrow-left button");
-    //
-    const videos = document.querySelectorAll(".video");
+const loader = document.querySelector(".loader");
+const navbar = document.querySelector(".navbar");
+const sectionCarouselPresentation = document.querySelector(".section-carousel-presentation");
+const presentationTabItem = document.querySelectorAll(".presentation-tab-item");
+const sectionVideoCampagne = document.querySelector(".section-video-campagne");
+const sectionContact = document.querySelector(".section-contact");
+const sectionTeam = document.querySelector(".section-team");
+//
+const presentationButton1 = document.querySelector("#presentation-button-1");
+const presentationButton2 = document.querySelector("#presentation-button-2");
+const presentationButton3 = document.querySelector("#presentation-button-3");
+//
+const presentationTabItem1 = document.querySelector("#carousel-tab-1");
+const presentationTabItem2 = document.querySelector("#carousel-tab-2");
+const presentationTabItem3 = document.querySelector("#carousel-tab-3");
+//
+let videoIteration = 0;
+const buttonNextVideo = document.querySelector(".section-video-campagne .arrow-right button");
+const buttonPreviousVideo = document.querySelector(".section-video-campagne .arrow-left button");
+//
+const videos = document.querySelectorAll(".video");
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    
+    loader.style="display:none";
 
     presentationButton1.addEventListener('click', ()=>{
         presentationButton2.classList.remove('active');
@@ -46,6 +52,7 @@
     });
 
     window.addEventListener('scroll', ()=>{
+        //console.log(document.documentElement.scrollTop);
         if(document.documentElement.scrollTop > 118){
             navbar.classList.add("down");
         }else{
@@ -62,6 +69,10 @@
 
         if((+sectionContact.scrollTop+500) <= document.documentElement.scrollTop){
             sectionContact.style = "transform:translateX(0); opacity:1;";
+        }
+
+        if((+sectionTeam.scrollTop+50) <= document.documentElement.scrollTop){
+            sectionTeam.style = "gap : 6px;"
         }
     });
 
@@ -117,3 +128,5 @@
             });
         },0);
     });
+
+}, false);
