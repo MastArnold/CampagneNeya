@@ -1,0 +1,25 @@
+.ico{
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-arrow-down{
+    content: url("../assets/svg/fold-down.svg");
+}
+.ico-team{
+    content: url("../assets/svg/team.svg");
+}
+.ico-objectif{
+    content: url("../assets/svg/target-2.svg");
+}
+.ico-mission{
+    content: url("../assets/svg/flag-1.svg");
+}
