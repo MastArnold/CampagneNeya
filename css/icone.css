@@ -23,3 +23,10 @@
 .ico-mission{
     content: url("../assets/svg/flag-1.svg");
 }
+
+.ico-arrow-left{
+    content: url("../assets//svg/left-arrow-direction.svg");
+}
+.ico-arrow-right{
+    content: url("../assets/svg/right-arrow-direction.svg");
+}

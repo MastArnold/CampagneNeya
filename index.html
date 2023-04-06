@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="css/icone.css">
 </head>
 <body>
+    <nav class="navbar">
+        <ul class="container">
+            <li class="nav-item"><a href="#contexte"> Contexte de candidature</a></li>
+            <li class="nav-item"><a href="#video-campagne">Vidéo de Campagne</a></li>
+            <li class="nav-item"><a href="#campagne">Carte de Campagne</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <!-- Section d'en-tête -->
     <section class="section-head" id="head">
         <div class="photo-head">
@@ -47,14 +55,14 @@
             <div class="balance-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate laboriosam nihil fugiat dolore ratione odit officia voluptates unde mollitia, pariatur blanditiis minus, magnam distinctio facilis est temporibus nemo culpa itaque.</p>
             </div>
-            <button>
+            <a href="#contexte">
                 En savoir plus
                 <i class="ico ico-arrow-down"></i>
-            </button>
+            </a>
         </div>
     </section>
     <!-- Carousel de la présentation (team, diplome, references) -->
-    <section class="section-carousel-presentation" id="carousel-presentation">
+    <section class="section-carousel-presentation" id="contexte">
         <div class="presentation-nav">
             <div class="presentation-button active" id="presentation-button-1">
                 <button>La mission</button>
@@ -88,11 +96,39 @@
 
         </div>
     </section>
+    <!-- Vidéo de campagne -->
+    <section class="section-video-campagne" id="video-campagne">
+        <div class="arrow-left">
+            <button>
+                <i class="ico ico-arrow-left"></i>
+            </button>
+        </div>
+        <div class="videos">
+            <div class="video" id="video-1">
+                <video src="assets/videos/1.mp4" type="video/mp4" controls></video>
+            </div>
+            <div class="video" id="video-2">
+                <video src="assets/videos/2.mp4" type="video/mp4" controls></video>
+            </div>
+            <div class="video" id="video-3">
+                <video src="assets/videos/3.mp4" type="video/mp4" controls></video>
+            </div>
+        </div>
+        <div class="arrow-right">
+            <button>
+                <i class="ico ico-arrow-right"></i>
+            </button>
+        </div>
+    </section>
     <!-- Carte de campagne -->
     <section class="section-campagne" id="campagne">
 
     </section>
+    <section class="section-contact" id="contact">
+
+    </section>
 
     <script src="js/script.js"></script>
+    <script src="js/sms.js"></script>
 </body>
 </html>
