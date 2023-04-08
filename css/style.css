@@ -107,14 +107,24 @@ body{
         margin : 0;
     }
     .section-head .photo-head{
-        width: 50%;
+        position: absolute;
+        left : -50px;
+        top : 0;
+        width: 100%;
     } 
     .section-head .balance{
         width: 100%;
         padding : 0;
     }
     .section-head .balance::before{
-        content: "";
+        opacity: 0;
+    }
+    .section-head .balance-body{
+        background-color: rgba(40, 75, 99, 0.6) !important;
+        font-size: 12px;
+    }
+    #contexte{
+        display: none !important;
     }
 }
 .section-head .balance::before{
@@ -338,7 +348,7 @@ body{
     padding : 20px;
     margin : 0 auto;
     scale : 0.4;
-    transition: all 0.3 1.2s ease-in-out;
+    transition: all 1.2s ease-in-out;
 }
 .section-video-campagne .arrow-left{
     display: flex;
@@ -386,7 +396,7 @@ body{
     min-width: 100%;
     max-width: 100%;
     transform: translateX(100%);
-    transition: all 0.3 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 .section-video-campagne .videos .video video{
     width: 100%;

@@ -1,6 +1,6 @@
 function send_sms(number, message){
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://www.lesmsbus.com:7170/ines.smsbus/smsbusMt?to=226"+number+"&text='"+message+"'&username=JoFastco&password=332GabHASMS&from=Lawyer", true);
+    xhr.open("GET", "https://www.lesmsbus.com:7170/ines.smsbus/smsbusMt?to=226"+number+"&text="+message+"&username=JoFastco&password=332GabHASMS&from=Neya.com", true);
     xhr.responseType = "text";
     xhr.send();
 
@@ -9,7 +9,7 @@ function send_sms(number, message){
             alert("Erreur" + xhr.status + " : " + xhr.statusText);
         }else{
             var response = xhr.responseText;
-            alert(response);
+            //alert(response);
         }
     };
     

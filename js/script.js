@@ -1,5 +1,6 @@
 const loader = document.querySelector(".loader");
 const navbar = document.querySelector(".navbar");
+const buttonHead = document.querySelector("#button-contact-form");
 const sectionCarouselPresentation = document.querySelector(".section-carousel-presentation");
 const presentationTabItem = document.querySelectorAll(".presentation-tab-item");
 const sectionVideoCampagne = document.querySelector(".section-video-campagne");
@@ -20,9 +21,36 @@ const buttonPreviousVideo = document.querySelector(".section-video-campagne .arr
 //
 const videos = document.querySelectorAll(".video");
 
+function onscroll(){
+    //console.log(document.documentElement.scrollTop);
+    if(document.documentElement.scrollTop > 118){
+        navbar.classList.add("down");
+    }else{
+        navbar.classList.remove("down");
+    }
+
+    if(sectionCarouselPresentation.scrollTop <= document.documentElement.scrollTop){
+        sectionCarouselPresentation.style = "transform:translateX(0); opacity:1;"
+    }
+
+    if((+sectionVideoCampagne.scrollTop+500) <= document.documentElement.scrollTop){
+        sectionVideoCampagne.style = "scale : 1;";
+    }
+
+    if((+sectionContact.scrollTop+500) <= document.documentElement.scrollTop){
+        sectionContact.style = "transform:translateX(0); opacity:1;";
+    }
+
+    if((+sectionTeam.scrollTop+50) <= document.documentElement.scrollTop){
+        sectionTeam.style = "gap : 6px;"
+    }
+}
+
 document.addEventListener('DOMContentLoaded', ()=>{
     
-    loader.style="display:none";
+    setTimeout(()=>{
+        loader.style="display:none";
+    }, 2000);
 
     presentationButton1.addEventListener('click', ()=>{
         presentationButton2.classList.remove('active');
@@ -52,28 +80,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
 
     window.addEventListener('scroll', ()=>{
-        //console.log(document.documentElement.scrollTop);
-        if(document.documentElement.scrollTop > 118){
-            navbar.classList.add("down");
-        }else{
-            navbar.classList.remove("down");
-        }
-
-        if(sectionCarouselPresentation.scrollTop <= document.documentElement.scrollTop){
-            sectionCarouselPresentation.style = "transform:translateX(0); opacity:1;"
-        }
-
-        if((+sectionVideoCampagne.scrollTop+500) <= document.documentElement.scrollTop){
-            sectionVideoCampagne.style = "scale : 1;";
-        }
-
-        if((+sectionContact.scrollTop+500) <= document.documentElement.scrollTop){
-            sectionContact.style = "transform:translateX(0); opacity:1;";
-        }
-
-        if((+sectionTeam.scrollTop+50) <= document.documentElement.scrollTop){
-            sectionTeam.style = "gap : 6px;"
-        }
+        onscroll();
     });
 
     buttonNextVideo.addEventListener('click', ()=>{
@@ -128,5 +135,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             });
         },0);
     });
+
+    onscroll();
 
 }, false);
