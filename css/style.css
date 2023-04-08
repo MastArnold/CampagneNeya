@@ -56,12 +56,14 @@ body{
 }
 
 .section-head{
+    position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 600px;
+    
     margin : 70px 0 0 0;
     background-image : url("../assets/svg/justice-law-svgrepo-com\ \(1\).svg");
     background-repeat: no-repeat;
@@ -70,7 +72,7 @@ body{
 }
 
 .section-head .photo-head{
-    width: 60%;
+    width: 90%;
 }
 
 .section-head img{
@@ -79,39 +81,56 @@ body{
     margin : 0 auto;
 }
 
-@media (max-width : 850px) {
+@media (max-width : 810px) {
     .section-head{
-        flex-direction: column;
+        justify-content: center;
     }
     .section-head .photo-head, .section-head .balance{
-        width: 100%;
+        width: 50%;
+        padding : 12px;
+    }
+    .balance-head{
+        display: none;
     }
     .section-head .photo-head img{
-        width: 40%;
+        width: 100%;
     }
 }
-
+.section-head .balance::before{
+    position: absolute;
+    content : url("../assets/svg/blob.svg");
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
 .section-head .balance{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 40%;
-    padding : 20%;
+    padding : 7% 20%;
     color : #fff;
-    background-image: url('../assets/svg/blob.svg');
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
+    z-index: 400;
 }
 .section-head .balance-head{
     display: flex; 
     justify-content: center;
     align-items: center;
+    z-index: 401;
+}
+.section-head .balance-head svg{
+    width: 30%;
+    height: auto;
 }
 .section-head .balance-body{
     text-align: center;
     font-size: 14px;
+    z-index: 402;
+}
+#contexte{
+    z-index: 403;
 }
 @keyframes balance-button-animation{
     0%{
@@ -217,7 +236,7 @@ body{
 .section-team{
     width: 80%;
     padding : 12px;
-    margin:0 auto 50px auto;
+    margin:0 auto 80px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
