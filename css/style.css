@@ -11,6 +11,16 @@ body{
     background: #caf0f8;
 }
 
+h1{
+    font-size: 26px;
+}
+@media (max-width : 780px){
+    h1{
+        font-size: 22px;
+    }
+}
+
+
 .navbar{
     position: fixed;
     top : 0;
@@ -63,7 +73,6 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    
     margin : 70px 0 0 0;
     background-image : url("../assets/svg/justice-law-svgrepo-com\ \(1\).svg");
     background-repeat: no-repeat;
@@ -101,29 +110,36 @@ body{
         display: none;
     }
     .section-head{
-        justify-content: center;
+        justify-content: flex-end;
+        align-items: flex-end;
         flex-direction: column;
         background : #284b63;
         margin : 0;
     }
     .section-head .photo-head{
+        display: flex;
+        justify-content: flex-end;
         position: absolute;
-        left : -50px;
+        right : 50px;
+        left:0;
         top : 0;
-        width: 100%;
     } 
     .section-head .balance{
         width: 100%;
         padding : 0;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
     .section-head .balance::before{
         opacity: 0;
     }
-    .section-head .balance-body{
-        background-color: rgba(40, 75, 99, 0.6) !important;
-        font-size: 12px;
+    .section-head .balance-head{
+        display: none !important;
     }
-    #contexte{
+    .section-head .balance-content{
+        
+    }
+    #contexte-button{
         display: none !important;
     }
 }
@@ -245,8 +261,8 @@ body{
     margin: 0;
 }
 .presentation-tab .presentation-tab-item{
-    min-width: 100%;
-    max-width: 100%;
+    min-width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
     padding : 12px;
     color: #fff;
     transform: translateX(0);

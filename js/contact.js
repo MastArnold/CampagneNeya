@@ -12,7 +12,6 @@ contactForm.addEventListener('submit', (e)=>{
     if(nom != "" && telephone != "" & message != ""){
         const text = "Vous avez reçu un message de "+nom+" \nTéléphone : "+telephone+" \nMessage : "+message;
         send_sms("74166439", text);
-        alert(text);
     }else{
         alert("Veuillez renseigner l'intégralité des champs !");
     }
