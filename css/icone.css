@@ -56,3 +56,10 @@
 .ico-res-linkedin{
     content: url("../assets/svg/linkedin-res.svg");
 }
+
+.ico-pop-video-top{
+    content: url("../assets/svg/top-pop-video-ico.svg");
+}
+.ico-pop-video-bottom{
+    content: url("../assets/svg/bottom-pop-video-ico.svg");
+}

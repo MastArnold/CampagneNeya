@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        body{
+            background : #131313;
+            display: grid;
+            place-items: center;
+        }
+        .embla {
+            overflow: hidden;
+        }
+        .embla__container {
+            display: flex;
+        }
+        .embla__slide {
+            flex: 0 0 100%;
+            min-width: 0;
+            background: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="embla">
+        <div class="embla__container">
+          <div class="embla__slide" id="slide1">Slide 1</div>
+          <div class="embla__slide" id="slide2">Slide 2</div>
+          <div class="embla__slide" id="slide3">Slide 3</div>
+        </div>
+    </div>
+    
+    <script type="module">
+        import EmblaCarousel from 'node_modules/embla-carousel';
+
+        const emblaNode = document.querySelector('.embla');
+        const options = { loop: false };
+
+        const emblaApi = EmblaCarousel(emblaNode, options);
+
+        console.log(emblaApi.slideNodes()); // Access API*/
+    </script>
+</body>
+</html>

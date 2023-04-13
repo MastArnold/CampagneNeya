@@ -1,0 +1,22 @@
+.section-presentation{
+    display: flex;
+
+    width: 80%;
+    margin : 15px auto;
+}
+.section-presentation .section-presentation-head{
+    width: 50%;
+    height: 400px;
+    margin : 0;
+    background-image: url("../assets/img/8.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section-presentation .section-presentation-body{
+    width: 50%;
+    height: auto;
+}
+.section-presentation-body .presentation-text{
+    padding : 8px 16px;
+}
