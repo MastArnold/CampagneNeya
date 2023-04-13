@@ -57,27 +57,6 @@
     animation: pulse 2s 1s ease-out infinite;
 }
 
-@media (max-width : 780px){
-    .section-presentation{
-        flex-direction: column;
-    }
-    .section-presentation .section-presentation-head{
-        height: 200px;
-    }
-    .section-presentation .section-presentation-body{
-        padding-bottom: 50px;
-    }
-    .section-presentation .section-presentation-head, .section-presentation .section-presentation-body{
-        width: 100%;
-    }
-    .btn-show-cv{
-        width: 50px;
-        height: 50px;
-    }
-    .cv-popup{
-        width: 100%;
-    }
-}
 
 @keyframes pulse{
     100%{
@@ -87,6 +66,7 @@
 }
 
 .cv-overlay{
+    overflow: auto;
     display: grid;
     place-items: center;
     position: fixed;
@@ -98,10 +78,8 @@
     z-index: 2002;
 }
 .cv-popup{
-    overflow: auto;
     position: relative;
     width: 50%;
-    height: calc(100% - 15px);
 }
 .cv-popup-head{
     display : flex;
@@ -122,7 +100,28 @@
     place-items: center;
 }   
 .cv-popup-body img{
-    height: auto;
     width: 100%;
-    object-fit: contain;
+    height: auto;
+}
+
+@media (max-width : 780px){
+    .section-presentation{
+        flex-direction: column;
+    }
+    .section-presentation .section-presentation-head{
+        height: 200px;
+    }
+    .section-presentation .section-presentation-body{
+        padding-bottom: 50px;
+    }
+    .section-presentation .section-presentation-head, .section-presentation .section-presentation-body{
+        width: 100%;
+    }
+    .btn-show-cv{
+        width: 50px;
+        height: 50px;
+    }
+    .cv-popup{
+        width: 100%;
+    }
 }
