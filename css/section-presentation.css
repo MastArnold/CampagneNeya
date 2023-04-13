@@ -1,6 +1,5 @@
 .section-presentation{
     display: flex;
-
     width: 80%;
     margin : 15px auto;
 }
@@ -14,9 +13,116 @@
     background-repeat: no-repeat;
 }
 .section-presentation .section-presentation-body{
+    position: relative;
     width: 50%;
     height: auto;
+    background: #fff;
 }
 .section-presentation-body .presentation-text{
     padding : 8px 16px;
+}
+.btn-show-cv{
+    cursor : pointer;
+    position: absolute;
+    bottom : 15px;
+    right : 15px;
+    width: 80px;
+    height: 80px;
+    padding : 0;
+    color : #284b63;
+    font-weight: bold;
+    background: transparent;
+    border-color: transparent;
+    display: grid;
+    place-items: center;
+    background-image: url("../assets/svg/file-04-svgrepo-com.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.btn-show-cv:after, .btn-show-cv:before{
+    content : '';
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background-color: #284b63;
+    border-radius: 50%;
+    z-index: 200;
+    opacity: 0.7;
+}
+.btn-show-cv:before{
+    animation: pulse 2s ease-out infinite;
+}
+.btn-show-cv:after{
+    animation: pulse 2s 1s ease-out infinite;
+}
+
+@media (max-width : 780px){
+    .section-presentation{
+        flex-direction: column;
+    }
+    .section-presentation .section-presentation-head{
+        height: 200px;
+    }
+    .section-presentation .section-presentation-body{
+        padding-bottom: 50px;
+    }
+    .section-presentation .section-presentation-head, .section-presentation .section-presentation-body{
+        width: 100%;
+    }
+    .btn-show-cv{
+        width: 50px;
+        height: 50px;
+    }
+    .cv-popup{
+        width: 100%;
+    }
+}
+
+@keyframes pulse{
+    100%{
+        transform:scale(2.5);
+        opacity:0;
+    }
+}
+
+.cv-overlay{
+    display: grid;
+    place-items: center;
+    position: fixed;
+    left : 0;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    background : rgba(0, 0, 0, 0.6);
+    z-index: 2002;
+}
+.cv-popup{
+    overflow: auto;
+    position: relative;
+    width: 50%;
+    height: calc(100% - 15px);
+}
+.cv-popup-head{
+    display : flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin:0;
+    padding : 15px 8px;
+}
+.cv-popup-head .btn-close-cv{
+    cursor:pointer;
+    background: transparent;
+    border-color: transparent;
+    color : #fff;
+    font-size: 20px;
+}
+.cv-popup-body{
+    display: grid;
+    place-items: center;
+}   
+.cv-popup-body img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
 }
