@@ -46,96 +46,88 @@ function onscroll(){
     }
 }
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    
-    setTimeout(()=>{
-        loader.style="display:none";
-    }, 2000);
-
-    presentationButton1.addEventListener('click', ()=>{
-        presentationButton2.classList.remove('active');
-        presentationButton3.classList.remove('active');
-        presentationButton1.classList.add('active');
-        presentationTabItem.forEach((item)=>{
-            item.style = "transform:translateX(0);"
-        });
+presentationButton1.addEventListener('click', ()=>{
+    presentationButton2.classList.remove('active');
+    presentationButton3.classList.remove('active');
+    presentationButton1.classList.add('active');
+    presentationTabItem.forEach((item)=>{
+        item.style = "transform:translateX(0);"
     });
+});
 
-    presentationButton2.addEventListener('click', ()=>{
-        presentationButton1.classList.remove('active');
-        presentationButton3.classList.remove('active');
-        presentationButton2.classList.toggle('active');
-        presentationTabItem.forEach((item)=>{
-            item.style = "transform:translateX(-100%);"
-        });
+presentationButton2.addEventListener('click', ()=>{
+    presentationButton1.classList.remove('active');
+    presentationButton3.classList.remove('active');
+    presentationButton2.classList.toggle('active');
+    presentationTabItem.forEach((item)=>{
+        item.style = "transform:translateX(-100%);"
     });
+});
 
-    presentationButton3.addEventListener('click', ()=>{
-        presentationButton1.classList.remove('active');
-        presentationButton2.classList.remove('active');
-        presentationButton3.classList.toggle('active');
-        presentationTabItem.forEach((item)=>{
-            item.style = "transform:translateX(-200%);"
-        });
+presentationButton3.addEventListener('click', ()=>{
+    presentationButton1.classList.remove('active');
+    presentationButton2.classList.remove('active');
+    presentationButton3.classList.toggle('active');
+    presentationTabItem.forEach((item)=>{
+        item.style = "transform:translateX(-200%);"
     });
+});
 
-    window.addEventListener('scroll', ()=>{
-        onscroll();
-    });
-
-    buttonNextVideo.addEventListener('click', ()=>{
-        if(videoIteration < 2){
-            videoIteration++;
-        }
-        setTimeout(()=>{
-            videos.forEach((item)=>{
-                switch(videoIteration){
-                    case 0:
-                        item.style = "transform:translateX(100%)";
-                        break;
-                    case 1:
-                        document.querySelector("#video-1 video").pause();
-                        document.querySelector("#video-1 video").currentTime = 0;
-                        item.style = "transform:translateX(0)";
-                        break;
-                    case 2:
-                        document.querySelector("#video-2 video").pause();
-                        document.querySelector("#video-2 video").currentTime = 0;
-                        item.style = "transform:translateX(-100%)";
-                        break;
-                    default:
-                        break;
-                }
-            });
-        },0);
-    });
-
-    buttonPreviousVideo.addEventListener('click', ()=>{
-        if(videoIteration > 0)
-            videoIteration--;
-        setTimeout(()=>{
-            videos.forEach((item)=>{
-                switch(videoIteration){
-                    case 0:
-                        document.querySelector("#video-2 video").pause();
-                        document.querySelector("#video-2 video").currentTime = 0;
-                        item.style = "transform:translateX(100%)";
-                        break;
-                    case 1:
-                        document.querySelector("#video-3 video").pause();
-                        document.querySelector("#video-3 video").currentTime = 0;
-                        item.style = "transform:translateX(0)";
-                        break;
-                    case 2:
-                        item.style = "transform:translateX(-100%)";
-                        break;
-                    default:
-                        break;
-                }
-            });
-        },0);
-    });
-
+window.addEventListener('scroll', ()=>{
     onscroll();
+});
 
-}, false);
+buttonNextVideo.addEventListener('click', ()=>{
+    if(videoIteration < 2){
+        videoIteration++;
+    }
+    setTimeout(()=>{
+        videos.forEach((item)=>{
+            switch(videoIteration){
+                case 0:
+                    item.style = "transform:translateX(100%)";
+                    break;
+                case 1:
+                    document.querySelector("#video-1 video").pause();
+                    document.querySelector("#video-1 video").currentTime = 0;
+                    item.style = "transform:translateX(0)";
+                    break;
+                case 2:
+                    document.querySelector("#video-2 video").pause();
+                    document.querySelector("#video-2 video").currentTime = 0;
+                    item.style = "transform:translateX(-100%)";
+                    break;
+                default:
+                    break;
+            }
+        });
+    },0);
+});
+
+buttonPreviousVideo.addEventListener('click', ()=>{
+    if(videoIteration > 0)
+        videoIteration--;
+    setTimeout(()=>{
+        videos.forEach((item)=>{
+            switch(videoIteration){
+                case 0:
+                    document.querySelector("#video-2 video").pause();
+                    document.querySelector("#video-2 video").currentTime = 0;
+                    item.style = "transform:translateX(100%)";
+                    break;
+                case 1:
+                    document.querySelector("#video-3 video").pause();
+                    document.querySelector("#video-3 video").currentTime = 0;
+                    item.style = "transform:translateX(0)";
+                    break;
+                case 2:
+                    item.style = "transform:translateX(-100%)";
+                    break;
+                default:
+                    break;
+            }
+        });
+    },0);
+});
+
+onscroll();

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/section-photo.css">
     <link rel="stylesheet" href="css/pop-video.css">
     <link rel="stylesheet" href="css/section-presentation.css">
+    <link rel="stylesheet" href="css/section-interview.css">
 </head>
 <body>
     <div class="loader">
@@ -34,58 +35,112 @@
             <li class="nav-item"><a href="#interview">Interview</a></li>
             <li class="nav-item"><a href="#photo-campagne">Photo de Campagne</a></li>
             <li class="nav-item"><a href="#video-campagne">Vidéo de Campagne</a></li>
-            <li class="nav-item"><a href="#contact">Contact</a></li>
+            <li class="nav-item"><a href="#contact">Nous rejoindre</a></li>
         </ul>
     </nav>
     <!-- Section d'en-tête -->
     <section class="section-head" id="head">
-        <div class="photo-head">
-            <img src="assets/img/10.png" alt="">
-        </div>
-        <div class="balance">
-            <div class="balance-head">
-                <svg height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                    viewBox="0 0 508 508" xml:space="preserve">
-                    <circle style="fill:#ffffff;" cx="254" cy="254" r="254"/>
-                    <path style="fill:#DA4453;" d="M79.2,438c45.6,43.2,107.2,70,174.8,70s129.2-26.4,174.8-70H79.2z"/>
-                    <path style="fill:#2d2d2b;" d="M326.8,437.6H177.2l0,0c0-14,11.6-25.6,25.6-25.6h98.8C315.2,412,326.8,423.6,326.8,437.6
-                        L326.8,437.6z"/>
-                    <path style="fill:#2d2d2b;" d="M268.8,412h-33.6l6.8-238.8c3.2,0.8,6.4,1.2,10,1.2c3.2,0,6.8-0.4,10-1.2L268.8,412z"/>
-                    <g>
-                        <circle style="fill:#2d2d2b;" cx="252" cy="135.2" r="39.2"/>
-                        <path style="fill:#2d2d2b;" d="M331.2,268.4c11.2,30.8,40,52.8,74,52.8s62.8-22,74-52.8H331.2z"/>
-                        <circle style="fill:#2d2d2b;" cx="405.2" cy="135.2" r="16"/>
-                    </g>
-                    <g>
-                        <path style="fill:#2d2d2b;" d="M92.8,147.2c1.6,1.2,3.6,2.4,5.6,2.8L36,268.4h-6.8L92.8,147.2z"/>
-                        <path style="fill:#2d2d2b;" d="M112.8,147.2l64,120.8H170l-62.4-118C109.6,149.6,111.2,148.8,112.8,147.2z"/>
-                        <path style="fill:#2d2d2b;" d="M213.6,126c-0.8,2.8-1.2,6-1.2,8.8c0,3.2,0.4,6,1.2,8.8l-96-3.2c0.8-2,1.2-4,1.2-6s-0.4-4-1.2-6
-                            L213.6,126z"/>
-                        <path style="fill:#2d2d2b;" d="M389.2,135.2c0,2,0.4,4,1.2,5.6L290,144c0.8-2.8,1.2-6,1.2-8.8c0-3.2-0.4-6-1.2-8.8l100.4,3.2
-                            C389.6,131.2,389.2,132.8,389.2,135.2z"/>
-                        <path style="fill:#2d2d2b;" d="M394.8,147.2c1.6,1.2,3.6,2.4,5.6,2.8L338,268.4h-6.8L394.8,147.2z"/>
-                        <path style="fill:#2d2d2b;" d="M478.8,268.4H472L409.6,150c2-0.4,4-1.6,5.6-2.8L478.8,268.4z"/>
-                    </g>
-                    <g>
-                        <path style="fill:#2d2d2b;" d="M28.8,268.4c11.2,30.8,40,52.8,74,52.8s62.8-22,74-52.8H28.8z"/>
-                        <circle style="fill:#2d2d2b;" cx="102.8" cy="135.2" r="16"/>
-                    </g>
-                </svg>
-                <div class="balance-content">
-                    <div class="balance-title">
-                        Maitre Ali Neya
-                    </div>
-                    <div class="balance-text">
-                        Pour un barreau fort, impulsons la dynamique
-                    </div>
+        <div class="carousel-head">
+            <div class="sections-head">
+                <div class="photo-head" id="photoh-first">
+                    <img src="assets/img/10.png" alt="">
                 </div>
+                <div class="balance">
+                    <div class="balance-head">
+                        <svg height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                            viewBox="0 0 508 508" xml:space="preserve">
+                            <circle style="fill:#ffffff;" cx="254" cy="254" r="254"/>
+                            <path style="fill:#DA4453;" d="M79.2,438c45.6,43.2,107.2,70,174.8,70s129.2-26.4,174.8-70H79.2z"/>
+                            <path style="fill:#2d2d2b;" d="M326.8,437.6H177.2l0,0c0-14,11.6-25.6,25.6-25.6h98.8C315.2,412,326.8,423.6,326.8,437.6
+                                L326.8,437.6z"/>
+                            <path style="fill:#2d2d2b;" d="M268.8,412h-33.6l6.8-238.8c3.2,0.8,6.4,1.2,10,1.2c3.2,0,6.8-0.4,10-1.2L268.8,412z"/>
+                            <g>
+                                <circle style="fill:#2d2d2b;" cx="252" cy="135.2" r="39.2"/>
+                                <path style="fill:#2d2d2b;" d="M331.2,268.4c11.2,30.8,40,52.8,74,52.8s62.8-22,74-52.8H331.2z"/>
+                                <circle style="fill:#2d2d2b;" cx="405.2" cy="135.2" r="16"/>
+                            </g>
+                            <g>
+                                <path style="fill:#2d2d2b;" d="M92.8,147.2c1.6,1.2,3.6,2.4,5.6,2.8L36,268.4h-6.8L92.8,147.2z"/>
+                                <path style="fill:#2d2d2b;" d="M112.8,147.2l64,120.8H170l-62.4-118C109.6,149.6,111.2,148.8,112.8,147.2z"/>
+                                <path style="fill:#2d2d2b;" d="M213.6,126c-0.8,2.8-1.2,6-1.2,8.8c0,3.2,0.4,6,1.2,8.8l-96-3.2c0.8-2,1.2-4,1.2-6s-0.4-4-1.2-6
+                                    L213.6,126z"/>
+                                <path style="fill:#2d2d2b;" d="M389.2,135.2c0,2,0.4,4,1.2,5.6L290,144c0.8-2.8,1.2-6,1.2-8.8c0-3.2-0.4-6-1.2-8.8l100.4,3.2
+                                    C389.6,131.2,389.2,132.8,389.2,135.2z"/>
+                                <path style="fill:#2d2d2b;" d="M394.8,147.2c1.6,1.2,3.6,2.4,5.6,2.8L338,268.4h-6.8L394.8,147.2z"/>
+                                <path style="fill:#2d2d2b;" d="M478.8,268.4H472L409.6,150c2-0.4,4-1.6,5.6-2.8L478.8,268.4z"/>
+                            </g>
+                            <g>
+                                <path style="fill:#2d2d2b;" d="M28.8,268.4c11.2,30.8,40,52.8,74,52.8s62.8-22,74-52.8H28.8z"/>
+                                <circle style="fill:#2d2d2b;" cx="102.8" cy="135.2" r="16"/>
+                            </g>
+                        </svg>
+                        <div class="balance-content">
+                            <div class="balance-title">
+                                Maitre Ali Neya
+                            </div>
+                            <div class="balance-text">
+                                Pour un barreau fort, impulsons la dynamique
+                            </div>
+                        </div>
+                        
+                    </div>
                 
+                    <a href="#presentation" id="contexte-button">
+                        En savoir plus
+                        <i class="ico ico-arrow-down"></i>
+                    </a>
+                </div>
             </div>
-           
-            <a href="#contexte" id="contexte-button">
-                En savoir plus
-                <i class="ico ico-arrow-down"></i>
-            </a>
+            <div class="sections-head">
+                <div class="photo-head" id="photoh-first">
+                    <img src="assets/img/12.png" alt="">
+                </div>
+                <div class="balance">
+                    <div class="balance-head">
+                        <svg height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                            viewBox="0 0 508 508" xml:space="preserve">
+                            <circle style="fill:#ffffff;" cx="254" cy="254" r="254"/>
+                            <path style="fill:#DA4453;" d="M79.2,438c45.6,43.2,107.2,70,174.8,70s129.2-26.4,174.8-70H79.2z"/>
+                            <path style="fill:#2d2d2b;" d="M326.8,437.6H177.2l0,0c0-14,11.6-25.6,25.6-25.6h98.8C315.2,412,326.8,423.6,326.8,437.6
+                                L326.8,437.6z"/>
+                            <path style="fill:#2d2d2b;" d="M268.8,412h-33.6l6.8-238.8c3.2,0.8,6.4,1.2,10,1.2c3.2,0,6.8-0.4,10-1.2L268.8,412z"/>
+                            <g>
+                                <circle style="fill:#2d2d2b;" cx="252" cy="135.2" r="39.2"/>
+                                <path style="fill:#2d2d2b;" d="M331.2,268.4c11.2,30.8,40,52.8,74,52.8s62.8-22,74-52.8H331.2z"/>
+                                <circle style="fill:#2d2d2b;" cx="405.2" cy="135.2" r="16"/>
+                            </g>
+                            <g>
+                                <path style="fill:#2d2d2b;" d="M92.8,147.2c1.6,1.2,3.6,2.4,5.6,2.8L36,268.4h-6.8L92.8,147.2z"/>
+                                <path style="fill:#2d2d2b;" d="M112.8,147.2l64,120.8H170l-62.4-118C109.6,149.6,111.2,148.8,112.8,147.2z"/>
+                                <path style="fill:#2d2d2b;" d="M213.6,126c-0.8,2.8-1.2,6-1.2,8.8c0,3.2,0.4,6,1.2,8.8l-96-3.2c0.8-2,1.2-4,1.2-6s-0.4-4-1.2-6
+                                    L213.6,126z"/>
+                                <path style="fill:#2d2d2b;" d="M389.2,135.2c0,2,0.4,4,1.2,5.6L290,144c0.8-2.8,1.2-6,1.2-8.8c0-3.2-0.4-6-1.2-8.8l100.4,3.2
+                                    C389.6,131.2,389.2,132.8,389.2,135.2z"/>
+                                <path style="fill:#2d2d2b;" d="M394.8,147.2c1.6,1.2,3.6,2.4,5.6,2.8L338,268.4h-6.8L394.8,147.2z"/>
+                                <path style="fill:#2d2d2b;" d="M478.8,268.4H472L409.6,150c2-0.4,4-1.6,5.6-2.8L478.8,268.4z"/>
+                            </g>
+                            <g>
+                                <path style="fill:#2d2d2b;" d="M28.8,268.4c11.2,30.8,40,52.8,74,52.8s62.8-22,74-52.8H28.8z"/>
+                                <circle style="fill:#2d2d2b;" cx="102.8" cy="135.2" r="16"/>
+                            </g>
+                        </svg>
+                        <div class="balance-content">
+                            <div class="balance-title">
+                                Maitre Ali Neya
+                            </div>
+                            <div class="balance-text">
+                                Pour un barreau fort, impulsons la dynamique
+                            </div>
+                        </div>
+                        
+                    </div>
+                
+                    <a href="#presentation" id="contexte-button">
+                        En savoir plus
+                        <i class="ico ico-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -196,7 +251,22 @@
         </div>
     </section>
 
-    <!-- Phot de campagne -->
+    <!-- Interview -->
+    <section class="section-interview" id="interview">
+        <h1 class="text-center">Interview</h1>
+        <hr class="w-50 mg-auto">
+        <div class="interview">
+            <div class="video-interview">
+                <video src="assets/videos/1.mp4" controls></video>
+            </div>
+            <div class="description-interview">
+                Description de l'interview à insérer<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quisquam odit qui asperiores nihil consequuntur distinctio, blanditiis tenetur debitis sequi cum similique dignissimos quo veritatis. Cumque labore soluta accusamus nesciunt!
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo de campagne -->
     <section class="section-photo" id="photo-campagne">
         <h1 class="text-center">Photo de campagne</h1>
         
@@ -321,9 +391,11 @@
         </div>
     </!--section-->
     <section class="section-contact" id="contact">
-        <h1>Contact</h1>
-        <hr>
+        <h1 class="text-center">Nous rejoindre</h1>
+        <hr class="w-50 mg-auto">
         <div class="contact-tag">
+            <h1>Nos Contact</h1>
+            <hr>
             <div class="tag">
                 <i class="ico ico-adresse"></i>
                 <label for="">Bobo-Dioulasso, secteur 18 rue champs de campagne</label>
@@ -412,11 +484,20 @@
         </div>
     </div>
 
+    <script>
+        window.onload = function(){
+            setTimeout(()=>{
+                loader.style="display:none";
+            }, 2000);
+        };
+        
+    </script>
     <script src="js/contact.js"></script>
     <script src="js/script.js"></script>
     <script src="js/sms.js"></script>
     <script src="js/photo-campagne.js"></script>
     <script src="js/pop-video.js"></script>
     <script src="js/section-presentation.js"></script>
+    <script src="js/carousel-head.js"></script>
 </body>
 </html>
