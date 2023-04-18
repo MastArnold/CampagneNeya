@@ -1,0 +1,32 @@
+.section-SGC{
+    width : 80%;
+    height: 400px;
+    margin : 15px auto;
+    background: #fff;
+}
+.sgc-container{
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    padding : 14px;
+}
+.sgc{
+    flex: 1;
+}
+.sgc-photo{
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border : 1px solid transparent;
+    border-radius: 50%;
+    margin : 0 auto;
+}
+.sgc-photo img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.sgc-description{
+    padding : 8px;
+    text-align: center;
+}
